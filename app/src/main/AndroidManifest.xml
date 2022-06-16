@@ -24,7 +24,6 @@
         </activity>
         <activity android:name=".ChoiceMovie"></activity>
         <activity android:name=".JoinAccept"></activity>
-        <activity android:name=".MovieReview"></activity>
         <activity android:name=".ReviewShow"></activity>
         <activity android:name=".JoinChoiceMovie"></activity>
     </application>

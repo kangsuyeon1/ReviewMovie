@@ -29,89 +29,29 @@
 
     </LinearLayout>
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <TableLayout
+        <GridView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:numColumns="3"
+            android:id="@+id/gridmovie"></GridView>
+    </LinearLayout>
 
-            <TableRow>
-                <ImageButton
-                    android:layout_width="200dp"
-                    android:layout_height="290dp"
-                    android:layout_margin="2dp"
-                    android:src="@drawable/mov01"  >
-                </ImageButton>
-                <ImageButton
-                    android:layout_width="200dp"
-                    android:layout_height="290dp"
-                    android:layout_margin="2dp"
-                    android:src="@drawable/mov02"  >
-                </ImageButton>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
 
-
-            </TableRow>
-            <TableRow>
-                <ImageButton
-                    android:layout_width="200dp"
-                    android:layout_height="290dp"
-                    android:layout_margin="2dp"
-                    android:src="@drawable/mov03"  >
-                </ImageButton>
-                <ImageButton
-                    android:layout_width="200dp"
-                    android:layout_height="290dp"
-                    android:layout_margin="2dp"
-                    android:src="@drawable/mov04"></ImageButton>
-
-            </TableRow>
-            <TableRow>
-                <ImageButton
-                    android:layout_width="200dp"
-                    android:layout_height="290dp"
-                    android:layout_margin="2dp"
-                    android:src="@drawable/mov05"  ></ImageButton>
-
-                <ImageButton
-                    android:layout_width="200dp"
-                    android:layout_height="290dp"
-                    android:layout_margin="2dp"
-                    android:src="@drawable/mov06"></ImageButton>
-
-            </TableRow>
-            <TableRow>
-                <ImageButton
-                    android:layout_width="200dp"
-                    android:layout_height="290dp"
-                    android:layout_margin="2dp"
-                    android:src="@drawable/mov07"  >
-                </ImageButton>
-                <ImageButton
-                    android:layout_width="200dp"
-                    android:layout_height="290dp"
-                    android:layout_margin="2dp"
-                    android:src="@drawable/mov08"  >
-                </ImageButton>
-            </TableRow>
-            <TableRow>
-                <ImageButton
-                    android:layout_width="200dp"
-                    android:layout_height="290dp"
-                    android:layout_margin="2dp"
-                    android:src="@drawable/mov09"  >
-                </ImageButton>
-                <ImageButton
-                    android:layout_width="200dp"
-                    android:layout_height="290dp"
-                    android:layout_margin="2dp"
-                    android:src="@drawable/mov10"  >
-                </ImageButton>
-            </TableRow>
-        </TableLayout>
-
-    </ScrollView>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivPoster"></ImageView>
+    </LinearLayout>
 
 </LinearLayout>
