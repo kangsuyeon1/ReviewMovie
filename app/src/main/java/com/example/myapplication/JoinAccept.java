@@ -8,7 +8,7 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class JoinAccept extends AppCompatActivity {
+public class JoinAccept extends MainActivity {
 
     Button btncheck;
     EditText etjoinname,etjoinID,etjoinPW;
@@ -28,6 +28,8 @@ public class JoinAccept extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),JoinChoiceMovie.class);
                 startActivity(intent);
+
+                database = helper.getWritableDatabase();
             }
         });
     }

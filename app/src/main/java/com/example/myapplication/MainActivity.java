@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                sql = "SELECT id FROM " + helper.tableName + "WHERE id = '" + id +"'";
+                sql = "SELECT tId FROM helper.tableName WHERE tId = '" + id +"'";
                 cursor = database.rawQuery(sql, null);
 
                 if (cursor.getCount() != 1){
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                sql = "SELECT pw FROM " + helper.tableName + "WHERE id = '" + pw +"'";
+                sql = "SELECT tPw FROM  helper.tableName  WHERE tPw = '" + pw +"'";
                 cursor = database.rawQuery(sql, null);
 
                 cursor.moveToNext();
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void createTable(SQLiteDatabase sqLiteDatabase){
-            String sql = "CREATE TABLE" + tableName + "(id text, pw text)";
+            String sql = "CREATE TABLE tableName (tId TEXT, tPw TEXT);";
 
             try {
                 sqLiteDatabase.execSQL(sql);
@@ -124,12 +124,15 @@ public class MainActivity extends AppCompatActivity {
             Log.i("tag","회원가입을 했을 때 실행함");
             db.beginTransaction();
             try{
-                String sql = "INSERT INTO" + tableName + "(id,pw)" + "values('"+id +"', '"+ pw + "')";
+                String sql = "INSERT INTO tableName VALUES ('"+ id + "', " + pw +");";
                 db.execSQL(sql);
                 db.setTransactionSuccessful();
             }catch (Exception e){
-                e.printStackTrace();
-            }finally {
+                e.printStackTrace();{
+                    db.endTransaction();
+                }
+            }
+            finally{
                 db.endTransaction();
             }
         }
